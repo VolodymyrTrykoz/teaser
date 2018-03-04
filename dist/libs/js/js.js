@@ -13,7 +13,7 @@ function animationGeneralRun(){
 		menu.addEventListener('click', menuOpen);
 
 
-		bottomToggle.addEventListener('click', function(){
+		bottomToggle.addEventListener('drag', function(){
 			businessSection.classList.remove('business-lg');
 			this.classList.add('toggle-sm--hidden');
 		});
