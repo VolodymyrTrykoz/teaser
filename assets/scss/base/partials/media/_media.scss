@@ -1,0 +1,139 @@
+
+@media screen and (max-width: 1400px) { 
+		.container {
+			padding: 0 15px;
+		}		
+		.advertisement__descr {
+			& h1 {
+				width: 45%;
+				font-size: 50px;
+
+			}
+		}
+
+		.business {
+			& a {
+			    display: inline-block;
+			    width: 40%;
+			} 
+			
+			&__box {
+		   		width: 100%;
+			} 
+
+			& .container {
+				justify-content: space-around;
+			} 
+		}
+
+	
+
+		
+}
+
+
+@media screen and (max-width: 1218px) {
+			.menu-slim {
+				display: block;
+			}
+		
+		  	.nav-media {
+		  		display: none;
+		  	}
+
+		  	.advertisement {
+				& .container {
+					justify-content: center;
+				}
+
+		  		&__descr {
+					text-align: center;
+					& h1 {
+						width: 100%;
+						font-size: 32px;
+
+					}
+
+		  		}
+
+
+					
+		}
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 992px) { 
+	
+	.advertisement {
+		& p {
+			font-size: 12px;
+		}
+
+		&:before {
+			display: none;
+		}
+
+	}
+	.business{
+		& .text-wrap {
+			margin-top: 1.5em;
+			margin-left: 2.5em;
+		}
+
+		& h1 {
+			font-size: 1rem;
+		}
+
+		& p {
+			font-size: 0.8rem;
+			margin-top: 0px;
+		}
+		
+		&:after {
+			display: none;
+		}
+
+		&-lg {
+			display: none;
+		}
+
+		&__box {
+			height: 11em;
+
+		}
+	}
+
+
+	.toggle-sm {
+		display: block;
+	}
+
+}
+
+
+@media screen and (max-width: 576px) { 
+	.advertisement__descr {
+		width: 100%;
+	}
+
+	.business{
+		& .text-wrap {
+			margin-left: 15px;
+		}
+	}
+
+
+}
+
+
+
+
+
+
+
+

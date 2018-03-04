@@ -1,0 +1,207 @@
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  max-width: 1360px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+
+  
+
+.header {
+  
+  -webkit-animation-delay: 0.5s;
+  @extend %transition;
+    
+    &__logo {
+      -webkit-animation-delay: 0.5s;
+      -webkit-animation-duration: 2s;
+    }
+    &--abs {
+      display: block;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &--output {
+      padding-top: 33px;
+      margin-bottom: 13.8em;
+    } 
+    & .nav {
+      margin: 0 50px 0 auto;
+     
+      & a {
+        font-size: 1.8rem;
+        margin-left: 15px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: $secondary-font;
+        font-weight: 800;
+        color: $heading-color;
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+
+        &:hover {
+          
+            &:after {
+                animation: nav-cross-line 0.3s linear forwards; 
+                content: '';
+                position: absolute;
+                z-index: -1;
+                bottom: 3px;
+                left: 15px;
+                height: 6px;
+                background: #7ab9ff;
+                width: calc(88% - 4px);
+            }
+            &:last-child {
+              &:after {
+                width: 90%;
+              }
+            }
+        }
+      }
+
+     
+    }
+}
+
+
+
+.align-center {
+  justify-content: center;
+}
+
+
+
+
+//Menu burger button
+.menu-slim {
+  display: none;
+  background: transparent;
+  position: absolute;
+  z-index: 555;
+  top: 0;
+  right: 20px;
+  height: 17px;
+  width: 50px;
+  cursor: pointer;    
+  &:before,
+  &:after {
+    background: #7ab9ff;
+    backface-visibility: hidden;
+    content: "";
+    height: 3px;
+    left: 0;
+    transition: 0.75s;
+    width: 30px;
+  }
+
+  &:before {
+    box-shadow:  #7ab9ff 0 7px 0 0;
+    position: absolute;
+    top: 0;
+  }
+
+  &:after {
+    position: absolute;
+    top: calc(100% - 2px);
+  }
+
+}
+
+
+.menu-js-toggle {
+    position: fixed;
+    right: 20px; 
+      &:before {
+        box-shadow: transparent 0 0 0 0;
+        top: 50%;
+        transform: rotate(225deg);
+      }
+
+      &:after {
+        top: 50%;
+        transform: rotate(315deg);
+      }
+}
+
+
+
+
+.displayNone {
+  display: none;
+}
+
+
+
+.menu {
+  margin-top: 33px;
+}
+
+ 
+
+
+.bounceOutUp {
+  -webkit-animation-delay: 1s;
+}
+
+
+
+
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+     transform: translate(-50%, 0);
+  }
+  40% {
+   transform: translate(-50%, -50%);
+  }
+  60% {
+    transform: translate(-50%, -25%);
+  }
+}
+
+
+
+
+
+//animation
+
+
+
+
+@keyframes blue-line {
+    0% {
+       width: calc(0% - 4px);
+    }
+
+
+    100% {
+       width: calc(100% - 4px);
+    }
+}  
+
+
+
+
+
+
+@keyframes nav-cross-line {
+    0% {
+       transform: translateX(-110%)
+    }
+
+
+    100% {
+       transform: translateX(105%)
+    }
+} 

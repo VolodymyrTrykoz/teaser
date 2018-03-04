@@ -1,0 +1,147 @@
+.advertisement {
+    position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 47%;
+        left:-20px;
+        width: 84px;
+        height: 84px;
+        background-image: url(../img/drop.png);
+        z-index: -1;
+       
+      } 
+
+
+    & .container {
+      justify-content: space-between;
+        &--center {
+          justify-content: center;
+        }
+    }    
+
+
+    &__laptop {
+      @extend %transition;  
+      position: relative;
+      -webkit-animation-delay:1s;
+
+        & .parallax1 {
+          width: 100%;
+          height: auto;
+          position: relative; 
+        }
+        & .parallax2, .parallax3, .parallax4 {
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -20;
+          width: 100%;
+          height: auto;
+        }
+   
+
+        & .parallax2 {
+          -webkit-animation-delay: 1.5s;
+        }
+        & .parallax3 {
+          -webkit-animation-delay: 1.7s;
+        }
+        & .parallax4 {
+          -webkit-animation-delay: 1.9s;
+        }
+      
+    }
+        & .laptop__movie {
+          position: absolute;
+          width: 410px;
+          height: 270px;
+          top: 81px;
+          left: 101px;
+          z-index: -1;
+          overflow: hidden;
+          
+        }
+   
+
+
+    &__descr {
+      width: 46%;  
+        & h1 {
+          font-size: 6rem;
+          font-family: $main-font;
+          font-weight: 400;
+          color: $heading-color;
+          letter-spacing: -1px;
+          margin-bottom: 22px;
+        }
+
+        & p {
+          @extend %transition;   
+          font-family: $main-font;
+          font-size: 1.8rem;
+          color: $content-color;
+        }
+    }
+
+
+    .blue-line {
+      position: relative;
+
+          &:after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            bottom: 14%;
+            left: 3px;
+            height: 26%;
+            background: #7ab9ff;
+            animation: blue-line 0.3s linear forwards;
+            animation-delay: 1s;
+          }
+    }
+}
+
+.video {
+    position: absolute;
+    top: 20%;
+    left: 16%;
+    width: 65%;
+    padding-bottom: 43.25%;
+    height: 0;
+    
+}
+
+
+//made this class to cover original movie to disable user`s interraction
+.antirewind {
+    position: absolute;
+    top: 20%;
+    left: 15.9%;
+    width: 65%;
+    padding-bottom: 43.25%;
+    height: 0;
+}
+
+.video iframe {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+
+
+
+.img-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-wrap img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: 2;
+
+}

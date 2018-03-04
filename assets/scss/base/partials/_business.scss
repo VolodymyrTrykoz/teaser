@@ -1,0 +1,141 @@
+//business section
+
+* {
+  outline: none;
+}
+
+
+.business {
+  margin: 5rem auto 5rem;
+  position: relative;
+  
+
+  & a {
+    text-decoration: none;
+    color: #fff;
+    @extend %transition;
+    &:hover {
+      transform: translateY(-15px);
+    }
+  }
+
+  & h1 {
+    font-family: $secondary-font;
+    font-size: 3.7rem;
+    font-weight: 100;
+    word-spacing: -1px;
+    letter-spacing: -0.5px;
+    margin: 0; 
+  }
+
+  & p {
+    transition: 0.3s linear;
+    font-family: $secondary-font;
+    font-size: 1.8rem;
+    margin-top: -2em;
+    opacity: 0;
+    
+  }
+
+  &-lg {
+     margin: 7rem auto 7rem;
+     position: relative;
+  }
+
+  &__box {
+    @extend %br7;
+    @extend %transition;
+    width: 64rem;
+    height: 25rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0rem 5rem 7rem #c7c8c9; 
+    
+        &:hover { 
+          box-shadow: 0rem 6rem 7rem #d5d6d7;
+          transform: translateY(-15px);
+                & p {
+                  margin-top: 3.2rem;   
+                  opacity: 1;     
+                }
+                & .text-wrap {  
+                  @extend %transition;   
+                }
+
+
+        }
+  }
+  &__partner {
+    background-image: url(../img/img-button-1.png);
+    -webkit-animation-delay: 2.1s;
+  }
+
+  &__advertiser {
+     background-image: url(../img/img-button-2.png);
+     margin-right: -0.9rem;
+    -webkit-animation-delay: 2.7s;
+  }
+
+  & .text-wrap {
+     margin-left: 4.5rem;
+     
+  }
+
+  &:after {
+      content: '';
+      position: absolute;
+      bottom: -5.3rem;
+      left: -19.4rem;
+      width: 95.5rem;
+      height:25.5rem;
+      background-image: url(../img/img-text-guru.jpg);
+
+      background-repeat: no-repeat;
+       z-index: -1;
+  }          
+  
+}
+
+
+
+
+
+//toggle-sm
+
+
+.toggle-sm {
+  display: none;
+  text-align: center;
+
+  &--hidden {
+    visibility: hidden;
+  }
+
+  & a {
+    font-family: $third-font;
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: $color-gray;
+    display: inline-block;
+    margin: 2em 0 10em 0;
+    position: relative;
+  }
+}
+
+
+
+
+.icon--arrow {
+  @extend %ham;
+  top: 6rem;
+  font-size: 3rem;
+  animation: bounce 1.5s linear infinite;    
+        
+}
+
+
+
