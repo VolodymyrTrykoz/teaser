@@ -107,7 +107,10 @@
 
 		}
 	}
-
+	
+	.antirewind{
+		display:none;
+	}
 
 	.toggle-sm {
 		display: block;
@@ -117,18 +120,88 @@
 
 
 @media screen and (max-width: 576px) { 
-	.advertisement__descr {
-		width: 100%;
+	.header {
+		&__logo {
+		  display: block;
+	      position: relative;
+	      left: 60%;
+	      transform: translateX(-50%);
+			& img {
+				width: 61%;
+	    		height: auto;
+			} 
+			&--menu img {
+				width: 61%;
+	    		height: auto;
+			} 
+		}
+
+		&--output {
+			margin-bottom: 5.2rem;
+		} 
 	}
 
-	.business{
-		& .text-wrap {
-			margin-left: 15px;
+
+
+	.advertisement {
+		& h1 {
+			font-family: $prime-font;
+			font-size: 3.2rem;
+		    letter-spacing: -0.8px;
+		    line-height: 1.2;
+		}
+
+		& p {
+			font-family: $third-font;
+			font-size: 1.2rem;
+			margin-top: 2.7em;
+			margin-bottom: 3em;
+		}
+
+		&__descr {
+			width: 100%;
 		}
 	}
 
+		.business{
+			& .text-wrap {
+				margin-left: 15px;
+			}
 
+			&__box {
+				height: 6rem;
+
+				& :hover p {
+					margin-top: 0.2rem;
+				}
+			}
+
+			
+
+		
+	}
+		.menu-js-toggle {
+			right: 0;
+		}
+
+		.menu-slim {
+			right: 0;
+		}
+
+		.menu-slim:before, .menu-slim:after {
+			width: 23px;
+		}
+
+			.toggle-sm a {
+				font-weight: 600;
+			}
+
+			.icon--arrow {
+			    top: 3rem;
+			    font-size: 2rem;
+			}
 }
+	
 
 
 

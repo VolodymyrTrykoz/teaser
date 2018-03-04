@@ -74,14 +74,9 @@ html {
     }
 }
 
-
-
 .align-center {
   justify-content: center;
 }
-
-
-
 
 //Menu burger button
 .menu-slim {
@@ -113,7 +108,7 @@ html {
 
   &:after {
     position: absolute;
-    top: calc(100% - 2px);
+    top: calc(100% - 3px);
   }
 
 }

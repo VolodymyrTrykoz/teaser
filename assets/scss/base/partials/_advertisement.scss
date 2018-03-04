@@ -101,37 +101,23 @@
           }
     }
 }
-
+ 
 .video {
     position: absolute;
-    top: 20%;
-    left: 16%;
-    width: 65%;
-    padding-bottom: 43.25%;
+    top: 17%;
+    left: 15%;
+    width: 66%;
+    padding-bottom: 46.25%;
     height: 0;
-    
+      & video {
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background: #424242;
+      }
 }
-
-
-//made this class to cover original movie to disable user`s interraction
-.antirewind {
-    position: absolute;
-    top: 20%;
-    left: 15.9%;
-    width: 65%;
-    padding-bottom: 43.25%;
-    height: 0;
-}
-
-.video iframe {
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-}
-
-
 
 .img-wrap {
   position: relative;

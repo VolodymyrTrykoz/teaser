@@ -10,40 +10,22 @@
 @import "base/placeholders";
 @import "base/variables";
 
-
-
-
-  
+ 
 
 // Fonts
 
 @import "base/fonts";
 
 
-// // Parts of my project  
-//  @import 'base/partials/general';
+// Parts of my project  
+
   @import 'base/partials/header';
   @import 'base/partials/mobile-menu';
   @import 'base/partials/advertisement';
   @import 'base/partials/business';
-//  @import 'base/partials/full-slider';
-//  @import 'base/partials/form';
-//  @import 'base/partials/mini-slider';
-//  @import 'base/partials/columns';
-//  @import 'base/partials/article';
-//  @import 'base/partials/map';
 
 
-//  //Media    
-
-//  @import 'base/partials/media/header-media';
-//  @import 'base/partials/media/full-slider-media';
-//  @import 'base/partials/media/mini-slider-media';
-//  @import 'base/partials/media/columns-media';
-//  @import 'base/partials/media/article-media';
-
-
-//  //Mobile
+//Mobile
 
   @import 'base/partials/media/media';
 
