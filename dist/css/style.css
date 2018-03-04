@@ -399,7 +399,7 @@ th {
   .icon.icon--arrow:before {
     content: ""; }
 
-.header, .nav__mobile a, .advertisement__laptop, .advertisement__descr p, .business a, .business__box, .business__box:hover .text-wrap {
+.header, .nav__mobile a, .advertisement__laptop, .advertisement__descr p, .business a, .business__box, .business__box:hover .text-wrap, .toggle-sm a:hover {
   -webkit-transition: 0.2s linear;
   -o-transition: 0.2s linear;
   transition: 0.2s linear; }
@@ -846,6 +846,8 @@ html {
     display: inline-block;
     margin: 2em 0 10em 0;
     position: relative; }
+    .toggle-sm a:hover {
+      color: #7ab9ff; }
 
 .icon--arrow {
   top: 6rem;

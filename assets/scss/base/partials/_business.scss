@@ -123,6 +123,11 @@
     display: inline-block;
     margin: 2em 0 10em 0;
     position: relative;
+
+        &:hover {
+        @extend %transition;
+        color: #7ab9ff;
+      }
   }
 }
 
