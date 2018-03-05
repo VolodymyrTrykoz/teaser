@@ -2,59 +2,53 @@ window.addEventListener('load', animationGeneralRun);
 
 function animationGeneralRun(){
 
-		var menu = document.querySelector('.menu');
-		var navigation = document.querySelector('.header__nav');
-		var mobileBox = document.querySelector('.mobile-menu');
-		var mobileMenuItems = document.querySelectorAll('.nav__mobile a')
-		var logoMenu = document.querySelector('.header__logo--menu');
-		var businessSection = document.querySelector('.business');
-		var bottomToggle = document.querySelector('.toggle-sm');
+	var menu = document.querySelector('.menu');
+	var navigation = document.querySelector('.header__nav');
+	var mobileBox = document.querySelector('.mobile-menu');
+	var mobileMenuItems = document.querySelectorAll('.nav__mobile a')
+	var logoMenu = document.querySelector('.header__logo--menu');
+	var businessSection = document.querySelector('.business');
+	var bottomToggle = document.querySelector('.toggle-sm');
 
-		menu.addEventListener('click', menuOpen);
+	menu.addEventListener('click', menuOpen);
 
+	bottomToggle.addEventListener('drag', function(){
+		businessSection.classList.remove('business-lg');
+		this.classList.add('toggle-sm--hidden');
+	});
 
-		bottomToggle.addEventListener('drag', function(){
-			businessSection.classList.remove('business-lg');
-			this.classList.add('toggle-sm--hidden');
-		});
+	parallaxRun();
+	runBusinessAnimation();
 
+	function menuClose() { // remove class after animation
+		mobileBox.classList.remove('mobile-menu-fix');
+	}  
+	
+	function menuOpen(){
+		var self = this; // for context in setTimeOut
+		
+		if(this.classList.contains('menu-js-toggle')){ // if Menu Opened
+			menu.classList.remove('menu-js-toggle');
+			
+			mobileBox.classList.remove('slideInLeft');					
+			mobileBox.classList.add('fadeOut');					
+			setTimeout(menuClose.bind(self), 1000); // remove classes after 1 sec (animation)
 
-
-		parallaxRun();
-		runBusinessAnimation();
-
-
-		function menuOpen(){
+		} else { // if Menu Closed
 			mobileBox.classList.toggle('mobile-menu-fix');
 			mobileBox.classList.add('slideInLeft');
 			menu.classList.toggle('menu-js-toggle');
-			logoMenu.classList.add('slideInLeft');
-			
-			if(this.classList.contains('menu-js-toggle')){
-				console.log('works');
-				for(var i = 0; i < mobileMenuItems.length; i++){
-					
-				 	mobileMenuItems[i].classList.add('fadeInLeft');
-				 	mobileMenuItems[i].addEventListener('click', function(){
-				 		// mobileBox.classList.add('fadeOut');
-				 		businessSection.classList.remove('business-lg');
-						mobileBox.classList.remove('mobile-menu-fix');
-						menu.classList.remove('menu-js-toggle');
-						bottomToggle.classList.add('toggle-sm--hidden');
-						
-				 	})
-				}
-				menuClose();
-				    function menuClose(callback){
-						function callback(){
-							setTimeout(function(){
-								mobileBox.classList.remove('slideInLeft');
-							}, 2000)
-						}
-					callback();
-				}
-			}	
 		}
+	}
+	
+	function addMenuAmination() { 
+		logoMenu.classList.add('slideInLeft');
+		for (var i = 0; i < mobileMenuItems.length; i++) {
+			mobileMenuItems[i].classList.add('slideInLeft');
+		};
+	};
+
+	addMenuAmination(); // add all necessary lib's classes for animation ONCE (not on each click!)
 
 
 
@@ -138,7 +132,6 @@ function animationGeneralRun(){
 				var logoMain = document.querySelector('.header__logo');
 				function centering(){
 					setTimeout(function(){
-					
 					laptopCont.classList.add('container--center');
 					advertLaptop.classList.add('zoomIn');
 					parLay2.classList.add('zoomIn');
@@ -160,5 +153,6 @@ function animationGeneralRun(){
 			}
 		}
 }
+
 
 

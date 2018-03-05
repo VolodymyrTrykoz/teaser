@@ -618,21 +618,8 @@ html {
     font-weight: 800;
     color: #202020;
     position: relative;
-    display: inline-block;
+    display: block;
     overflow: hidden; }
-    .nav__mobile a:hover:after {
-      -webkit-animation: nav-cross-line 0.3s linear forwards;
-              animation: nav-cross-line 0.3s linear forwards;
-      content: '';
-      position: absolute;
-      z-index: -1;
-      bottom: 3px;
-      left: 15px;
-      height: 6px;
-      background: #7ab9ff;
-      width: calc(88% - 4px); }
-    .nav__mobile a:hover:last-child:after {
-      width: 90%; }
 
 .nav__wrapper-mob {
   margin-top: 3.5em; }

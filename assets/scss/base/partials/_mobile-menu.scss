@@ -34,29 +34,10 @@
         font-weight: 800;
         color: $heading-color;
         position: relative;
-        display: inline-block;
+        display: block;
         overflow: hidden;
         @extend %transition;
 
-        &:hover {
-          
-            &:after {
-                animation: nav-cross-line 0.3s linear forwards; 
-                content: '';
-                position: absolute;
-                z-index: -1;
-                bottom: 3px;
-                left: 15px;
-                height: 6px;
-                background: #7ab9ff;
-                width: calc(88% - 4px);
-            }
-            &:last-child {
-              &:after {
-                width: 90%;
-              }
-            }
-		}
 	}	
 }	
 
@@ -70,7 +51,7 @@
 .nav__mobile {
 	margin-top: 5em;
 }
-
+ 
 
 
 .mobile {
