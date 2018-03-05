@@ -12,10 +12,7 @@ function animationGeneralRun(){
 
 	menu.addEventListener('click', menuOpen);
 
-	bottomToggle.addEventListener('drag', function(){
-		businessSection.classList.remove('business-lg');
-		this.classList.add('toggle-sm--hidden');
-	});
+	bottomToggle.addEventListener('drag', hiddenBusinesBubbling);
 
 	parallaxRun();
 	runBusinessAnimation();
@@ -45,6 +42,11 @@ function animationGeneralRun(){
 		logoMenu.classList.add('slideInLeft');
 		for (var i = 0; i < mobileMenuItems.length; i++) {
 			mobileMenuItems[i].classList.add('slideInLeft');
+			mobileMenuItems[i].addEventListener('click', function(){
+				mobileBox.classList.remove('mobile-menu-fix');
+				menu.classList.remove('menu-js-toggle');
+				hiddenBusinesBubbling();
+			})
 		};
 	};
 
@@ -151,6 +153,11 @@ function animationGeneralRun(){
 				navigation.classList.add('zoomOutLeft');
 				centering();
 			}
+		}
+
+		function hiddenBusinesBubbling(){
+		businessSection.classList.remove('business-lg');
+		bottomToggle.classList.add('toggle-sm--hidden');
 		}
 }
 
